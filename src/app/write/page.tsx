@@ -1,7 +1,8 @@
+import Wirte from "@/views/write/Wirte";
 import React from "react";
 
 const page = () => {
-  return <div>page</div>;
+  return <Wirte />;
 };
 
 export default page;
