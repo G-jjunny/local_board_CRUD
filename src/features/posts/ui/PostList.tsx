@@ -28,7 +28,7 @@ const PostList = () => {
         onChange={(e) => setKeyword(e.target.value)}
         className="w-full md:w-1/2"
       />
-      <div className=" w-full h-[2px] bg-muted-foreground"></div>
+      <div className=" w-full h-[2px] bg-muted-foreground" />
 
       {/* ── 게시글 카드 리스트 ─────────────── */}
       <div className="flex flex-col gap-2">

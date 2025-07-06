@@ -29,22 +29,22 @@ const Posts = () => {
 
   return (
     <main className="max-w-2xl mx-auto p-6 space-y-6">
-      <header className="flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">{post.title}</h1>
         <Button variant="destructive" onClick={handleDelete}>
           삭제
         </Button>
-      </header>
-
-      <article className="whitespace-pre-wrap text-base text-gray-700">
+      </div>
+      <div className=" w-full h-[2px] bg-muted-foreground" />
+      <div className="whitespace-pre-wrap text-base text-gray-700">
         {post.content}
-      </article>
+      </div>
 
-      <section>
-        <h2 className="font-semibold mt-6 mb-2">댓글</h2>
+      <div className=" flex flex-col gap-2">
+        <h2 className="font-semibold mt-6">댓글</h2>
         <CommentList comments={post.comments} />
         <CommentForm postId={post.id} />
-      </section>
+      </div>
     </main>
   );
 };
