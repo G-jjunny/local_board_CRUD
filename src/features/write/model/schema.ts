@@ -1,6 +1,6 @@
 import z from "zod";
 
-export const formSchema = z.object({
+export const WriteFormSchema = z.object({
   title: z
     .string()
     .min(2, { message: "제목은 두 글자 이상 입력해주세요." })

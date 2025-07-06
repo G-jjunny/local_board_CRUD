@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+
+import Posts from "@/views/posts/Posts";
 
 const page = () => {
-  return <div>page</div>;
+  return <Posts />;
 };
 
 export default page;

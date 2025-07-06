@@ -3,7 +3,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
-import { formSchema } from "../model/schema";
+import { WriteFormSchema } from "../model/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import RHFInput from "@/shared/ui/RHFInput";
 import { Form } from "@/shared/ui/form";
@@ -15,8 +15,8 @@ import { useRouter } from "next/navigation";
 import { ROUTES } from "@/app/routes";
 
 const WriteForm = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof WriteFormSchema>>({
+    resolver: zodResolver(WriteFormSchema),
     defaultValues: {
       title: "",
       description: "",
@@ -26,7 +26,7 @@ const WriteForm = () => {
   const addPost = usePostStore((state) => state.addPost);
   const router = useRouter();
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = (values: z.infer<typeof WriteFormSchema>) => {
     addPost({
       id: uuid(),
       title: values.title,
