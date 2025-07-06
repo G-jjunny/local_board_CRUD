@@ -12,6 +12,7 @@ import { Button } from "@/shared/ui/button";
 import { usePostStore } from "@/shared/store/postStore";
 import { v4 as uuid } from "uuid";
 import { useRouter } from "next/navigation";
+import { ROUTES } from "@/app/routes";
 
 const WriteForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -34,7 +35,7 @@ const WriteForm = () => {
       comments: [],
     });
 
-    router.push("/");
+    router.push(ROUTES.HOME);
   };
 
   return (

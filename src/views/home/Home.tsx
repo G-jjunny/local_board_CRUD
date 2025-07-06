@@ -1,4 +1,5 @@
 "use-client";
+import { ROUTES } from "@/app/routes";
 import PostList from "@/features/posts/ui/PostList";
 import { Button } from "@/shared/ui/button";
 import Link from "next/link";
@@ -10,7 +11,7 @@ const Home = () => {
       {/* 상단 헤더 */}
       <header className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">게시판</h1>
-        <Link href="/write">
+        <Link href={ROUTES.WRITE}>
           <Button>글 작성</Button>
         </Link>
       </header>
