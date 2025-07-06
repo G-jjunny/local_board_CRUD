@@ -7,7 +7,9 @@ interface CommentListProps {
 export default function CommentList({ comments }: CommentListProps) {
   if (comments.length === 0) {
     return (
-      <p className="text-sm text-muted-foreground">아직 댓글이 없습니다.</p>
+      <p className=" my-2 text-sm text-muted-foreground">
+        아직 댓글이 없습니다.
+      </p>
     );
   }
 

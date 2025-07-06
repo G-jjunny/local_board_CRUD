@@ -28,15 +28,15 @@ const PostList = () => {
         onChange={(e) => setKeyword(e.target.value)}
         className="w-full md:w-1/2"
       />
+      <div className=" w-full h-[2px] bg-muted-foreground"></div>
 
       {/* ── 게시글 카드 리스트 ─────────────── */}
-      <div className="space-y-2">
+      <div className="flex flex-col gap-2">
         {filtered.length === 0 && (
           <p className="text-sm text-muted-foreground">게시글이 없습니다.</p>
         )}
 
         {filtered.map((post) => (
-          // <Link href={`/posts/${post.id}`} key={post.id}>
           <Link href={`${ROUTES.POST_DETAIL(post.id)}`} key={post.id}>
             <PostListCard title={post.title} />
           </Link>

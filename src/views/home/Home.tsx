@@ -15,7 +15,6 @@ const Home = () => {
           <Button>글 작성</Button>
         </Link>
       </header>
-
       {/* 게시글 목록 */}
       <PostList />
     </div>

@@ -14,7 +14,7 @@ const Posts = () => {
 
   if (!post) {
     return (
-      <p className="text-center text-muted-foreground">
+      <p className="text-center text-muted-foreground mt-10">
         존재하지 않는 게시글입니다.
       </p>
     );
