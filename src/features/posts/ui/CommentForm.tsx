@@ -39,9 +39,6 @@ const CommentForm = ({ postId }: CommentFormProps) => {
       >
         <RHFTextarea form={form} name="comment" placeholder="댓글 남기기" />
         <div className=" flex justify-end gap-2">
-          <Button type="button" variant="outline">
-            취소
-          </Button>
           <Button type="submit">등록</Button>
         </div>
       </form>
