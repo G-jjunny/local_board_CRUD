@@ -26,7 +26,7 @@ FSD 아키텍처 기반으로 구성되었습니다. 프론트엔드 프로젝�
 
 ```bash
 src/
-├── app/                      ## (FSD) App layer 라우팅, 전역 스타일 등
+├── app/                      ## (FSD) app layer 라우팅, 전역 스타일 등
 │   ├── page.tsx               # 메인 페이지 (게시글 목록)
 │   ├── write/page.tsx         # 게시글 작성 페이지
 │   ├── post/[id]/page.tsx     # 게시글 상세 페이지
@@ -44,7 +44,7 @@ src/
 │       ├── ui/                # UI 컴포넌트
 │       └── model/             # 타입, Zod 스키마, 상태 등
 │
-└── shared/                    # 전역에서 재사용 가능한 UI 컴포넌트, API, 상수, 유틸
+└── shared/                    # (FSD) shared layer 전역에서 재사용 가능한 UI 컴포넌트, API, 상수, 유틸
     ├── store/postStore.ts     # Zustand 상태 및 localStorage 연동
     └── ui/                    # 커스텀 Input/Textarea/Form 등
 ```
