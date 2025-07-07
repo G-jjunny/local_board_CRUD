@@ -56,7 +56,7 @@ const WriteForm = () => {
           placeholder="내용을 입력해주세요."
           name="description"
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">작성</Button>
       </form>
     </Form>
   );
